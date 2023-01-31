@@ -5,14 +5,16 @@ function NetGraph()
 {
     const graph = 
     {
-        nodes: [
+        nodes: 
+        [
           { id: 1, label: "Node 1", title: "node 1 tootip text" },
           { id: 2, label: "Node 2", title: "node 2 tootip text" },
           { id: 3, label: "Node 3", title: "node 3 tootip text" },
           { id: 4, label: "Node 4", title: "node 4 tootip text" },
           { id: 5, label: "Node 5", title: "node 5 tootip text" }
         ],
-        edges: [
+        edges: 
+        [
           { from: 1, to: 2 },
           { from: 1, to: 3 },
           { from: 2, to: 4 },
@@ -22,29 +24,36 @@ function NetGraph()
 
     const options = 
     {
-        edges: {
+        edges: 
+        {
             color: "#000000",
-            smooth: {
+            smooth: 
+            {
               type: "cubicBezier",
               forceDirection: "none"
             }
         },
-        physics: {
+
+        physics: 
+        {
             enabled: false,
             minVelocity: 0.75
         },
+
         height: "500px"
     };
 
-    const events = {
-        select(event) {
+    const events = 
+    {
+        select(event) 
+        {
           const { nodes, edges } = event;
           console.log('Selected nodes:');
           console.log(nodes);
           console.log('Selected edges:');
           console.log(edges);
         },
-      };
+    };
 
     return(
         <Graph graph={graph} options={options} events={events} />
