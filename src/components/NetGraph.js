@@ -3,11 +3,15 @@ import Graph from "react-graph-vis";
 
 function NetGraph()
 {
+  var prova = [];
+
+  prova.push({id: 1, label: "Node 1", title: "node 1 tootip text"});
+
     const graph = 
     {
         nodes: 
         [
-          { id: 1, label: "Node 1", title: "node 1 tootip text" },
+          prova[0],
           { id: 2, label: "Node 2", title: "node 2 tootip text" },
           { id: 3, label: "Node 3", title: "node 3 tootip text" },
           { id: 4, label: "Node 4", title: "node 4 tootip text" },
